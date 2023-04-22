@@ -1,6 +1,7 @@
 import classNames from "classnames/bind";
 
 import Header from "../Header";
+import Side from "./Side";
 import styles from "./Default.scss";
 
 const cx = classNames.bind(styles);
@@ -13,7 +14,7 @@ function Layout({children}) {
                     {children}
                 </div>
                 <div className={cx("side-layout")}>
-                    Side-column
+                    <Side/>
                 </div>
             </div>
         </aside>

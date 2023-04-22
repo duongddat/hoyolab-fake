@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faImage, faPenToSquare, faRightFromBracket, faUserAstronaut, faVideo } from '@fortawesome/free-solid-svg-icons';
@@ -8,16 +10,25 @@ import styles from './header.scss';
 import Menu, { MenuItem } from './Menu';
 import config from '../../../config';
 import {Wrapper as PopperWrapper} from '../../Poper';
-import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 function Header() {
+    const [active, setActive] = useState("user-post");
+
+    const handleHover = () => {
+        setActive("user-post active");
+    }
+
+    const handleOver = () => {
+        setActive("user-post");
+    }
+
     return ( 
         <header className={cx('header-wrapper')}>
-            <div className={cx('header-logo')}>
+            <Link className={cx('header-logo')} to={config.routes.home}>
                 <img src={logo} alt="logo"/>
                 <h1 className={cx('header-logo_title')}>HoYoTab</h1>
-            </div>
+            </Link>
             <nav className={cx('nav')}>
                 <Menu>
                     <MenuItem title="Home" to={config.routes.home}/>
@@ -31,7 +42,7 @@ function Header() {
                     interactive='true'
                     placement='bottom-end'
                     render={attrs => (
-                        <div className={cx("user-post-list")} tabIndex="-1" {...attrs}>
+                        <div className={cx("user-post-list")} onMouseOver={handleHover} onMouseOut={handleOver} tabIndex="-1" {...attrs}>
                             <PopperWrapper>
                                 <div className={cx('user-post-item')}>
                                     <Link className={cx("post-item-dialog")} to={config.routes.upload}>
@@ -58,7 +69,7 @@ function Header() {
                         </div>
                     )}
                     >
-                    <button className={cx('user-post')}>
+                    <button className={cx(active)}>
                         <FontAwesomeIcon icon={faPenToSquare}/>
                     </button>
                 </Tippy>
@@ -92,8 +103,7 @@ function Header() {
                     )}
                     >
                     <img className={cx('user-avatar')} src="https://techraptor.net/sites/default/files/styles/image_header/public/2021-08/YoimiyaGenshinHeader.jpeg?itok=4vYkJQjK" alt=""/>
-                </Tippy>
-                
+                </Tippy>      
             </div>
         </header>
      );
