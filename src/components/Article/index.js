@@ -9,9 +9,15 @@ import config from "../../config";
 
 const cx = classNames.bind(styles);
 function Article({ idUser, idArticle, avatar, name, info, title, topic, description, image }) {
+    const [copy, setCopy] = useState('icon-item');
+    const [like, setLiked] = useState('icon-item');
+    const [copied, setCopied] = useState(false);
     const [show, setShow] = useState('slider-show');
     const [current, setCurrent] = useState(0);
     const lenght = image.length;
+
+    //Check title 
+    const fixTitle = title.length > 71 ? title.slice(0, 71) + '...' : title; 
 
     const handleSliderShow = () => {
         setShow('slider-show active');
@@ -29,6 +35,18 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
         setCurrent(current === 0 ? lenght - 1 : current - 1);
     }
 
+    //Like article
+    const handleLike = () => {
+        like === 'icon-item' ? setLiked('icon-item active') : setLiked('icon-item');
+    }
+
+    //Copied URL
+    const handleCopyToClip = () => {
+        navigator.clipboard.writeText(window.location.href +  "article/" + idArticle);
+        setCopied(true);
+        setCopy('icon-item active');
+    }
+
     return (
         <div className={cx("body-container")}>
             <div className={cx("user-card")}>
@@ -44,7 +62,7 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
             <div className={cx("user-article")}>
                 <div className={cx("user-article_title")}>
                     <Link to={config.routes.article  + `/${idArticle}`}>
-                        {title}
+                        {fixTitle}
                     </Link>
                     <Link to={config.routes.home} className={cx("article-topic")}>
                         <p>{topic}</p>
@@ -61,12 +79,12 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
             </div>
             <div className="fui-connect-icon">
                 <ul className="icon-list">
-                    <li className="icon-item">
+                    <li className={like} onClick={handleLike}>
                         <div className="icon-link">
                             <div className="icon">
                                 <FontAwesomeIcon className={cx("icon-heart")} icon={faHeart} />
                             </div>
-                            <span className="text">Favourite</span>
+                            <span className="text">{(like === 'icon-item') ? 'Favourite': 'Favourited'}</span>
                         </div>
                     </li>
                     <li className="icon-item">
@@ -77,12 +95,12 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
                             <span className="text">Comment</span>
                         </div>
                     </li>
-                    <li className="icon-item">
+                    <li className={copy} onClick={handleCopyToClip}>
                         <div className="icon-link">
                             <div className="icon">
                                 <FontAwesomeIcon className={cx("icon-heart")} icon={faShareNodes} />
                             </div>
-                            <span className="text">Share</span>
+                            <span className="text">{!copied ? 'Copy link' : 'Copied'}</span>
                         </div>
                     </li>
                 </ul>

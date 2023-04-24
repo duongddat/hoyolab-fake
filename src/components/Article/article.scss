@@ -187,6 +187,18 @@
         }
       }
     }
+    .active:nth-child(1) {
+      .icon {
+        color: white;
+        background-color: rgb(225 29 72);
+      }
+    }
+    .active:nth-child(3) {
+      .icon {
+        color: white;
+        background-color: #4267b2;
+      }
+    }
     .icon-link {
       display: flex;
       flex-wrap: wrap;
