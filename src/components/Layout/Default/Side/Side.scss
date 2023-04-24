@@ -65,5 +65,148 @@
         }
       }
     }
+
+    .note-com {
+      padding: 8px;
+      border-radius: 8px;
+      margin-top: 6px;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        .icon-rule {
+          margin-right: 8px;
+          color: #5ecdff;
+        }
+        .note-title {
+          font-size: 16px;
+          line-height: 20px;
+          color: #000;
+        }
+      }
+
+      &:hover {
+        background-color: #eff2ff;
+      }
+    }
+
+    .topic-com {
+      padding: 8px 0;
+      margin-top: 6px;
+
+      .topic-card {
+        text-decoration: none;
+        padding: 8px 6px;
+        border-radius: 8px;
+
+        a {
+          text-decoration: none;
+
+          .topic-title {
+            color: #000;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          .topic-stats {
+            margin-top: 3px;
+            color: rgba(0, 0, 0, 0.45);
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+
+        &:hover {
+          background-color: #eff2ff;
+        }
+      }
+    }
+    .side-more {
+      margin-left: 5px;
+      color: #657ef8;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .side-qrcode {
+      display: flex;
+
+      .side-qrcode_code {
+        width: 105px;
+        height: 105px;
+        position: relative;
+        background: url("https://www.hoyolab.com/_nuxt/img/63abbea.png") 50%
+          no-repeat;
+        background-size: cover;
+      }
+      .side-qrcode_shop {
+        a {
+          width: 180px;
+          display: block;
+          height: 42px;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 8px;
+          margin-left: 30px;
+        }
+
+        .qrcode_shop-ios {
+          background-image: url("https://www.hoyolab.com/_nuxt/img/ef10ebe.png");
+          margin-bottom: 20px;
+        }
+        .qrcode_shop-androi {
+          background-image: url("https://www.hoyolab.com/_nuxt/img/1442bf9.png");
+        }
+      }
+    }
+  }
+  .side-slider-auto {
+    height: 112px;
+    width: 100%;
+  }
+
+  .side-footer {
+    font-size: 12px;
+    text-align: left;
+
+    .footer-item {
+      padding-top: 12px;
+      border: none;
+
+      .footer-item_title {
+        color: rgba(0, 0, 0, 0.45);
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+      }
+
+      .footer-item_block {
+        margin: 8px 0;
+        width: 50%;
+
+        .item-block_text {
+          line-height: 22px;
+          position: relative;
+          white-space: pre-wrap;
+          color: rgba(0, 0, 0, 0.4);
+
+          span {
+            word-wrap: break-word;
+            word-break: break-word;
+          }
+        }
+      }
+
+      p {
+        line-height: 16px;
+        color: rgba(0, 0, 0, 0.45);
+      }
+    }
   }
 }

@@ -132,7 +132,7 @@ const articleUser = [
     idUser: 10013,
     avatar: avt3,
     name: 'Lyza❀',
-    idArticle: 1110005,
+    idArticle: 1110010,
     info: '5h ago - Genshin Impact',
     title: 'Random gif I have on my camera roll-',
     topic: '#Random post',

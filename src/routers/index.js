@@ -15,7 +15,7 @@ const publicRoutes = [
     { path: '/following', component: Following },
     { path: '/upload', component: Upload, layout: HeaderOnly},
     { path: '/profile/:idUser', component: Profile, layout: HeaderOnly},
-    { path: '/contact', component: Contact},
+    { path: '/contact', component: Contact, layout: HeaderOnly},
     { path: '/event', component: Event, layout: HeaderOnly},
     { path: '/article/:id', component: Article},
 ]
