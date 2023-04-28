@@ -8,3 +8,16 @@ body {
   background-color: #f5f6fb;
   outline: none;
 }
+
+.btn-follow {
+  display: inline-block;
+  border: none;
+  border-radius: 15px;
+  padding: 0 24px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #657ef9;
+  background-color: #e1e7ff;
+}

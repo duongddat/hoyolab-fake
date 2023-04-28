@@ -27,7 +27,7 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
         setCurrent(0);
     }
 
-    //Slider  shows
+    //Slider shows
     const nextSlide = () => {
         setCurrent(current === lenght - 1 ? 0 : current + 1);
     }
@@ -47,6 +47,14 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
         setCopy('icon-item active');
     }
 
+    //Scroll to Top of Article Details
+    const handleScrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
     return (
         <div className={cx("body-container")}>
             <div className={cx("user-card")}>
@@ -61,7 +69,7 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
             </div>
             <div className={cx("user-article")}>
                 <div className={cx("user-article_title")}>
-                    <Link to={config.routes.article  + `/${idArticle}`}>
+                    <Link to={config.routes.article  + `/${idArticle}`} onClick={handleScrollUp}>
                         {fixTitle}
                     </Link>
                     <Link to={config.routes.home} className={cx("article-topic")}>
