@@ -282,8 +282,8 @@
 
       .slider-show_img {
         object-fit: cover;
-        height: 85%;
-        width: auto;
+        max-height: 85%;
+        max-width: 85%;
         animation: show 1s ease;
 
         @keyframes show {

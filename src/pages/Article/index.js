@@ -2,16 +2,16 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { articleUser } from "../../constants";
 import classNames from "classnames/bind";
-import { Swiper ,SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import { Navigation, Thumbs } from "swiper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFaceLaughBeam, faHeart, faMessage, faShare, faStar } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./Article.scss";
 import config from "../../config";
-import { Navigation, Thumbs } from "swiper";
-import { faHeart, faMessage, faShare, faStar } from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(styles);
 function Article() {
@@ -60,7 +60,7 @@ function Article() {
                             {
                                 article.image.map((img, i) => (
                                     <SwiperSlide key={i}>
-                                        <img src={img} alt="" className={cx("article-swiper-thumbs")}/>
+                                        <img src={img} alt="" className={cx("article-swiper-thumbs")} />
                                     </SwiperSlide>
                                 ))
                             }
@@ -69,14 +69,14 @@ function Article() {
                         <Swiper
                             loop={true}
                             spaceBetween={10}
-                            modules={[Navigation ,Thumbs]}
-                            thumbs={{swiper : activeThumb}}
+                            modules={[Navigation, Thumbs]}
+                            thumbs={{ swiper: activeThumb }}
                             className={cx("article-swiper-slider")}
                         >
                             {
                                 article.image.map((img, i) => (
                                     <SwiperSlide key={i}>
-                                        <img src={img} alt="" className={cx("article-swiper-img")}/>
+                                        <img src={img} alt="" className={cx("article-swiper-img")} />
                                     </SwiperSlide>
                                 ))
                             }
@@ -87,26 +87,98 @@ function Article() {
                             <span>Genshin Impact - HoyoLaB</span>
                         </div>
                         <div className={cx("article-footer_topic")}>
-                            <span>#Topic</span>
-                            <span>#Description</span>
+                            <span>{article.topic}</span>
+                            <span>{article.description}</span>
                         </div>
                         <div className={cx("article-footer-stats")}>
                             <div className={cx("article-footer-stats_item")}>
-                                <FontAwesomeIcon icon={faMessage} className={cx("article-footer-stats_item__icon")}/>
+                                <FontAwesomeIcon icon={faMessage} className={cx("article-footer-stats_item__icon")} />
                                 <span>3</span>
                             </div>
                             <div className={cx("article-footer-stats_item")}>
-                                <FontAwesomeIcon icon={faStar} className={cx("article-footer-stats_item__icon")}/>
+                                <FontAwesomeIcon icon={faStar} className={cx("article-footer-stats_item__icon")} />
                                 <span>10</span>
                             </div>
                             <div className={cx("article-footer-stats_item")}>
-                                <FontAwesomeIcon icon={faHeart} className={cx("article-footer-stats_item__icon")}/>
+                                <FontAwesomeIcon icon={faHeart} className={cx("article-footer-stats_item__icon")} />
                                 <span>9</span>
                             </div>
                             <div className={cx("article-footer-stats_item")}>
-                                <FontAwesomeIcon icon={faShare} className={cx("article-footer-stats_item__icon")}/>
+                                <FontAwesomeIcon icon={faShare} className={cx("article-footer-stats_item__icon")} />
                                 <span>99+</span>
                             </div>
+                        </div>
+                    </div>
+                    <div className={cx("article-ql")}>
+                        <div className={cx("ql-container")}>
+                            <input type="text" placeholder=" " className={cx("ql-input")} />
+                            <label for="name" className={cx("ql-label")}>Post your comment now~</label>
+                        </div>
+                        <div className={cx("group-reply")}>
+                            <FontAwesomeIcon icon={faFaceLaughBeam} className={cx("reply-icon")} />
+                            <button className={cx("btn-follow btn-send")}>Send</button>
+                        </div>
+                    </div>
+                </div>
+                <div className={cx("article-reply-list")}>
+                    <div className={cx("article-reply-list_header")}>
+                        <span>All comments {article.comment.length}</span>
+                    </div>
+                    {
+                        article.comment.length > 0 ?
+                            (
+                                article.comment.map((comment, i) => (
+                                    <div key={i} className={cx("reply-card")}>
+                                        <div className={cx("reply-card-left")}>
+                                            <Link to={config.routes.profile + `/${comment.idUser}`} className={cx("reply-card_link")}>
+                                                <img src={comment.avatar} alt="user avatar" className={cx("reply-card_avatar")} />
+                                            </Link>
+                                        </div>
+                                        <div className={cx("reply-card-container")}>
+                                            <div className={cx("reply-card-header")}>
+                                                <Link to={config.routes.profile + `/${comment.idUser}`} className={cx("reply-card_nickname")}>
+                                                    {comment.name}
+                                                    <p>Fan</p>
+                                                </Link>
+                                            </div>
+                                            <div className={cx("reply-card-content")}>
+                                                <p>{comment.reply}</p>
+                                            </div>
+                                            <div className={cx("reply-card-operation")}>
+                                                <span className={cx("reply-card_time")}>{comment.replyTime}</span>
+                                                <div className={cx("reply-card-operation_bottom")}>
+                                                    <div className={cx("article-footer-stats_item")}>
+                                                        <FontAwesomeIcon icon={faMessage} className={cx("article-footer-stats_item__icon")} />
+                                                        <span>Comments</span>
+                                                    </div>
+                                                    <div className={cx("article-footer-stats_item")}>
+                                                        <FontAwesomeIcon icon={faHeart} className={cx("article-footer-stats_item__icon")} />
+                                                        <span>9</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className={cx("article-ql")}>
+                                                <div className={cx("ql-container")}>
+                                                    <input type="text" placeholder=" " className={cx("ql-input")} />
+                                                    <label for="name" className={cx("ql-label")}>Post your comment now~</label>
+                                                </div>
+                                                <div className={cx("group-reply")}>
+                                                    <FontAwesomeIcon icon={faFaceLaughBeam} className={cx("reply-icon")} />
+                                                    <button className={cx("btn-follow btn-send")}>Send</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))
+                            )
+                            :
+                            (
+                                <></>
+                            )
+                    }
+                    <div className={cx("article-page-reply-list__loadmore")}>
+                        <div className={cx("loadmore__nomore")}>
+                            {article.comment.length > 0 ? 'That\'s all~' : 'No comments yet~'}
                         </div>
                     </div>
                 </div>

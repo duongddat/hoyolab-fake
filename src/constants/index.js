@@ -27,6 +27,29 @@ const articleUser = [
     topic: '#Ganyu',
     description: '#Wallpaper',
     image: [img1, img1o, img1t, img1th, img1f],
+    comment: [
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+    ]
   },
   {
     id: 2,
@@ -39,6 +62,29 @@ const articleUser = [
     topic: '#Fu Hua',
     description: '#Cosplay',
     image: [img2, img2t],
+    comment: [
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+    ]
   },
   {
     id: 3,
@@ -51,6 +97,7 @@ const articleUser = [
     topic: '#Shikanoin Heizou',
     description: '#Anemo Boys',
     image: [img3],
+    comment: [],
   },
   {
     id: 4,
@@ -63,6 +110,7 @@ const articleUser = [
     topic: '#Yoimiya Appreciation',
     description: '#Wallpaper',
     image: [img4],
+    comment: [],
   },
   {
     id: 5,
@@ -75,6 +123,29 @@ const articleUser = [
     topic: '#Nilou',
     description: '#Ai art',
     image: [img5, img5o, img5t],
+    comment: [
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+      {
+        idUser: 10012,
+        avatar: avt2,
+        name: 'Melanchophobia',
+        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/01/01',
+      },
+    ]
   },
   {
     id: 6,
@@ -87,6 +158,7 @@ const articleUser = [
     topic: '#Catto',
     description: '#Genshin Impact',
     image: ['https://upload-os-bbs.hoyolab.com/upload/2023/04/20/79d69732e666d555366d7a18b9159a50_2868643173492274298.jpeg'],
+    comment: [],
   },
   {
     id: 7,
@@ -99,6 +171,7 @@ const articleUser = [
     topic: '#Klee',
     description: '#Cosplay',
     image: ['https://upload-os-bbs.hoyolab.com/upload/2022/12/05/161470565/8899d2246a1d4ce5521bfd246b9e997b_2390571178117726739.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',],
+    comment: [],
   },
   {
     id: 8,
@@ -113,6 +186,7 @@ const articleUser = [
     image: ['https://upload-os-bbs.hoyolab.com/upload/2023/03/24/39818413/2282035d84d6145c6c77ada0cb19cbb2_8020615430704438920.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
            'https://upload-os-bbs.hoyolab.com/upload/2023/04/15/233413318/558909a1e668376f0b15a76665332c21_8018396436369346414.jpg?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
            'https://upload-os-bbs.hoyolab.com/upload/2023/04/15/233413318/ef14c43c87ff925eec6fb89db69ab024_6654997112674347752.jpg?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',],
+    comment: [],
   },
   {
     id: 9,
@@ -126,6 +200,7 @@ const articleUser = [
     description: '#Honkai Impact',
     image: ['https://upload-os-bbs.hoyolab.com/upload/2023/03/22/176255603/43bc6c41de483e3eb5bbd00423e28ec3_281858082740529380.gif',
             'https://upload-os-bbs.hoyolab.com/upload/2023/03/22/176255603/74f53d1c758c227eb3c4433d7af36a55_4887414601191753917.gif'],
+    comment: [],
   },
   {
     id: 10,
@@ -138,6 +213,7 @@ const articleUser = [
     topic: '#Random post',
     description: '#Genshin Impact',
     image: ['https://upload-os-bbs.hoyolab.com/upload/2023/03/18/192499230/7473928a631a6e3579ea7666c5fe2f4c_196802998150830876.gif?x-oss-process=image/resize,s_1000/quality,q_80/auto-orient,0/interlace,1/format,gif'],
+    comment: [],
   },
 ];
 

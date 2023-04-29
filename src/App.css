@@ -21,3 +21,7 @@ body {
   color: #657ef9;
   background-color: #e1e7ff;
 }
+
+input {
+  outline: none;
+}

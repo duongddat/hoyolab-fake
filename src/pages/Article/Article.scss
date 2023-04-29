@@ -148,6 +148,262 @@
           }
         }
       }
+
+      .article-ql {
+        padding-top: 16px;
+
+        .ql-container {
+          position: relative;
+
+          .ql-input {
+            border-radius: 8px;
+            min-height: 60px;
+            width: 100%;
+            padding: 0 20px;
+            border: 1px solid #eee;
+            transition: 0.25s ease;
+
+            &:focus {
+              outline: none;
+              border-color: #657ef9;
+            }
+
+            &:not(:placeholder-shown) + .ql-label,
+            &:focus + .ql-label {
+              top: 0;
+              padding: 0 5px;
+              display: inline-block;
+              background-color: #fff;
+              color: #657ef9;
+            }
+          }
+
+          .ql-label {
+            position: absolute;
+            top: 50%;
+            left: 21px;
+            transform: translateY(-50%);
+            user-select: none;
+            color: #999;
+            pointer-events: none;
+            transition: 0.2s ease;
+          }
+        }
+
+        .group-reply {
+          margin-top: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+
+          .reply-icon {
+            font-size: 24px;
+            height: 24px;
+            color: #999;
+
+            &:hover {
+              color: #657ef9;
+            }
+          }
+
+          .btn-send {
+            &:hover {
+              background-color: #657ef9;
+              color: #ffff;
+            }
+          }
+        }
+      }
+    }
+
+    .article-reply-list {
+      margin-top: 30px;
+
+      .article-reply-list_header {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 700;
+        padding: 10px 0;
+        border-bottom: 1px solid #f5f6fb;
+        color: rgba(0, 0, 0, 0.65);
+      }
+
+      .reply-card {
+        display: flex;
+        padding: 16px 16px 0;
+
+        .reply-card-left {
+          .reply-card_link {
+            text-decoration: none;
+
+            .reply-card_avatar {
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              border: 1px solid #333;
+              object-fit: cover;
+              margin-right: 12px;
+            }
+          }
+        }
+
+        .reply-card-container {
+          padding-bottom: 20px;
+          flex: 1;
+
+          .reply-card-header {
+            display: flex;
+            height: 48px;
+            padding: 4px 0;
+
+            .reply-card_nickname {
+              text-decoration: none;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 20px;
+              color: rgba(0, 0, 0, 0.85);
+
+              p {
+                margin-top: 4px;
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: 400;
+                color: rgba(0, 0, 0, 0.45);
+              }
+            }
+          }
+
+          .reply-card-content {
+            padding: 8px 0 12px;
+            line-height: 22px;
+            word-wrap: break-word;
+            word-break: break-word;
+          }
+
+          .reply-card-operation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .reply-card_time {
+              font-size: 12px;
+              color: rgba(0, 0, 0, 0.45);
+            }
+            .reply-card-operation_bottom {
+              display: flex;
+              align-items: center;
+
+              .article-footer-stats_item {
+                margin-left: 20px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .article-footer-stats_item__icon {
+                  font-size: 16px;
+                  margin-right: 5px;
+                  color: rgba(0, 0, 0, 0.45);
+                }
+
+                span {
+                  line-height: 16px;
+                  color: rgba(0, 0, 0, 0.65);
+                  font-size: 12px;
+                }
+
+                &:hover {
+                  .article-footer-stats_item__icon , span {
+                    color: #657ef9;
+                  }
+                }
+              }
+              
+            }  
+          }
+
+          .article-ql {
+            padding-top: 16px;
+    
+            .ql-container {
+              position: relative;
+    
+              .ql-input {
+                border-radius: 8px;
+                min-height: 60px;
+                width: 100%;
+                padding: 0 20px;
+                border: 1px solid #eee;
+                transition: 0.25s ease;
+    
+                &:focus {
+                  outline: none;
+                  border-color: #657ef9;
+                }
+    
+                &:not(:placeholder-shown) + .ql-label,
+                &:focus + .ql-label {
+                  top: 0;
+                  padding: 0 5px;
+                  display: inline-block;
+                  background-color: #fff;
+                  color: #657ef9;
+                }
+              }
+    
+              .ql-label {
+                position: absolute;
+                top: 50%;
+                left: 21px;
+                transform: translateY(-50%);
+                user-select: none;
+                color: #999;
+                pointer-events: none;
+                transition: 0.2s ease;
+              }
+            }
+    
+            .group-reply {
+              margin-top: 8px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              cursor: pointer;
+    
+              .reply-icon {
+                font-size: 24px;
+                height: 24px;
+                color: #999;
+    
+                &:hover {
+                  color: #657ef9;
+                }
+              }
+    
+              .btn-send {
+                &:hover {
+                  background-color: #657ef9;
+                  color: #ffff;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      .article-page-reply-list__loadmore {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .loadmore__nomore {
+          font-size: 14px;
+          font-weight: normal;
+          color: rgba(0, 0, 0, 0.25);
+        }
+      }
     }
   }
 }
