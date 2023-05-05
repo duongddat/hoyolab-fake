@@ -8,9 +8,19 @@ import ScrollToTop from "../../../ScrollToTop";
 import { toolsbar } from "../../../../constants";
 import styles from "./Side.scss";
 import config from "../../../../config";
+import { useState } from "react";
 
 const cx = classNames.bind(styles);
 function Side() {
+    // const ref = useRef(null);
+    const [fixed, setFixed] = useState(false);
+    
+    const handleFixed = () => {
+        window.scrollY >= 1450 ? setFixed(true) : setFixed(false);
+    }
+
+    window.addEventListener('scroll', handleFixed);
+
     return (
         <div className={cx("side-container")}>
             <div className={cx("side-section")}>
@@ -98,7 +108,7 @@ function Side() {
                     </div>
                 </div>
             </div>
-            <div className={cx("side-footer")}>
+            <div className={fixed ? 'side-footer sticky' : 'side-footer'}>
                 <div className={cx("footer-item")}>
                     <h3 className={cx("footer-item_title")}>About us</h3>
                     <div className={cx("footer-item_block")}>
@@ -108,7 +118,7 @@ function Side() {
                                 Genshin Impact genshin_cs@hoyoverse.com
                                 Tears of Themis totcs_glb@hoyoverse.com
                                 Honkai: Star Rail hsrcs_en@hoyoverse.com
-                                Content Creators contentcreator@hoyoverse.com"
+                                Content Creators contentcreator@hoyoverse.com
                             </span>
                         </div>
                     </div>

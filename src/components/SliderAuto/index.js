@@ -33,6 +33,9 @@ function SliderAuto() {
             <SwiperSlide>
                 <img className={cx("slider-img")} src="https://upload-os-bbs.hoyolab.com/upload/2023/04/17/51edeeddfe820a33e971a73939dcd6d3_1717329823243173729.png?x-oss-process=image%2Fresize%2Cs_400%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp" alt="" />
             </SwiperSlide>
+            <SwiperSlide>
+                <img className={cx("slider-img")} src="https://upload-os-bbs.hoyolab.com/upload/2023/04/30/854f9283a3d253997e39a6836cb49a12_4904268053341824559.png?x-oss-process=image%2Fresize%2Cs_400%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp" alt="" />
+            </SwiperSlide>
         </Swiper>
      );
 }

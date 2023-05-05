@@ -12,8 +12,7 @@ import img4 from '../assets/images/img4.webp';
 import img5 from '../assets/images/img5.webp';
 import img5o from '../assets/images/img5(1).webp';
 import img5t from '../assets/images/img5(2).webp';
-
-
+import bg from '../assets/video/bg.mp4';
 
 const articleUser = [
   {
@@ -26,7 +25,9 @@ const articleUser = [
     title: '[HoYoFair2023] I made an illustration of my Ganyu design',
     topic: '#Ganyu',
     description: '#Wallpaper',
-    image: [img1, img1o, img1t, img1th, img1f],
+    image: [img1, img1o, img1t, img1th, img1f,
+      'https://upload-os-bbs.hoyolab.com/upload/2023/04/13/100955275/2d978d4c7248b5c8bb5f4e661a2e587b_573952193394390027.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
+      'https://upload-os-bbs.hoyolab.com/upload/2023/03/05/78129164/dbefcc081372d2716d817ad282315b1e_2929986733630996322.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp'],
     comment: [
       {
         idUser: 10012,
@@ -36,18 +37,18 @@ const articleUser = [
         replyTime: '2023/01/01',
       },
       {
-        idUser: 10012,
-        avatar: avt2,
-        name: 'Melanchophobia',
-        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
-        replyTime: '2023/01/01',
+        idUser: 10015,
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcgcN9r32IRwhOzPLbBpA6YZatCBYV-iZTZA&usqp=CAU',
+        name: 'Only Arrai',
+        reply: 'I prefer the Wanderer\'s set, however both work very well.  The first part of the Wanderer\'s set kind of sucks.  However, the second part is pure gold.  The first part of the Shimenawa set is really good, however the second part has a price to pay.  The full answer is how often do you plan to use Ganyu\'s burst?  Standing in her burst also provides a large damage bonus too.  I forget how much.  If you do not plan to use her burst, Shimenawa.  If you plan to use her burst, Wanderer.  I recommend doing the same test with Ganyu standing inside her burst to see how much damage that adds.',
+        replyTime: '3d ago',
       },
       {
-        idUser: 10012,
-        avatar: avt2,
-        name: 'Melanchophobia',
-        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
-        replyTime: '2023/01/01',
+        idUser: 10014,
+        avatar: 'https://upload-os-bbs.hoyolab.com/upload/2023/04/11/10199248/e76bc117f5f35c302cc6608fd12fb96f_3041191841913761143.jpg?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
+        name: 'Fluffy Kaga',
+        reply: 'I wish you good look getting yourself un-permamuted after I report you for art theft ',
+        replyTime: '2d ago1',
       },
     ]
   },
@@ -64,25 +65,25 @@ const articleUser = [
     image: [img2, img2t],
     comment: [
       {
-        idUser: 10012,
-        avatar: avt2,
-        name: 'Melanchophobia',
-        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
-        replyTime: '2023/01/01',
+        idUser: 10013,
+        avatar: avt3,
+        name: 'Lyza❀',
+        reply: `That is literally the cutest cosplay i have ever seen <333. I love ur posts Yami! ^^`,
+        replyTime: '2023/02/09',
       },
       {
-        idUser: 10012,
-        avatar: avt2,
-        name: 'Melanchophobia',
+        idUser: 10017,
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmS52yUG_DYimbVFx8PJpx2QTHr9bDTWnDOw&usqp=CAU',
+        name: 'SHIRØKA',
         reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
-        replyTime: '2023/01/01',
+        replyTime: '2023/02/10',
       },
       {
-        idUser: 10012,
-        avatar: avt2,
-        name: 'Melanchophobia',
-        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
-        replyTime: '2023/01/01',
+        idUser: 10017,
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmS52yUG_DYimbVFx8PJpx2QTHr9bDTWnDOw&usqp=CAU',
+        name: 'SHIRØKA',
+        reply: 'Wow. 😎Looks really good. I really like that. 👍',
+        replyTime: '1d ago',
       },
     ]
   },
@@ -125,9 +126,16 @@ const articleUser = [
     image: [img5, img5o, img5t],
     comment: [
       {
-        idUser: 10012,
-        avatar: avt2,
-        name: 'Melanchophobia',
+        idUser: 10011,
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeePDCxDs0AD2Fc2fu57u8UNFU35WzgY9OuQ&usqp=CAU',
+        name: 'Simplor | Ganyu',
+        reply: 'Soo cute!! I’m planning on getting nilou in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        replyTime: '2023/03/03',
+      },
+      {
+        idUser: 10015,
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcgcN9r32IRwhOzPLbBpA6YZatCBYV-iZTZA&usqp=CAU',
+        name: 'Only Arrai',
         reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
         replyTime: '2023/01/01',
       },
@@ -135,14 +143,7 @@ const articleUser = [
         idUser: 10012,
         avatar: avt2,
         name: 'Melanchophobia',
-        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
-        replyTime: '2023/01/01',
-      },
-      {
-        idUser: 10012,
-        avatar: avt2,
-        name: 'Melanchophobia',
-        reply: 'Soo cute!! I’m planning on getting ganyu in 3.0 with 66 Pitt currently plus events updates and quests will guarantee her!!! ( of course I won the last 50/50, soo, kinda scared!!)',
+        reply: 'Eyes like an expecting puppy; very cute',
         replyTime: '2023/01/01',
       },
     ]
@@ -184,8 +185,8 @@ const articleUser = [
     topic: '#Shenhe',
     description: '#Ai art',
     image: ['https://upload-os-bbs.hoyolab.com/upload/2023/03/24/39818413/2282035d84d6145c6c77ada0cb19cbb2_8020615430704438920.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
-           'https://upload-os-bbs.hoyolab.com/upload/2023/04/15/233413318/558909a1e668376f0b15a76665332c21_8018396436369346414.jpg?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
-           'https://upload-os-bbs.hoyolab.com/upload/2023/04/15/233413318/ef14c43c87ff925eec6fb89db69ab024_6654997112674347752.jpg?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',],
+      'https://upload-os-bbs.hoyolab.com/upload/2023/04/15/233413318/558909a1e668376f0b15a76665332c21_8018396436369346414.jpg?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
+      'https://upload-os-bbs.hoyolab.com/upload/2023/04/15/233413318/ef14c43c87ff925eec6fb89db69ab024_6654997112674347752.jpg?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',],
     comment: [],
   },
   {
@@ -199,7 +200,7 @@ const articleUser = [
     topic: '#Kiana',
     description: '#Honkai Impact',
     image: ['https://upload-os-bbs.hoyolab.com/upload/2023/03/22/176255603/43bc6c41de483e3eb5bbd00423e28ec3_281858082740529380.gif',
-            'https://upload-os-bbs.hoyolab.com/upload/2023/03/22/176255603/74f53d1c758c227eb3c4433d7af36a55_4887414601191753917.gif'],
+      'https://upload-os-bbs.hoyolab.com/upload/2023/03/22/176255603/74f53d1c758c227eb3c4433d7af36a55_4887414601191753917.gif'],
     comment: [],
   },
   {
@@ -221,34 +222,103 @@ const toolsbar = [
   {
     img: 'https://game-cdn.appsample.com/gim/icons/intertwined-fate-200.png',
     title: 'Check-In',
-    url: 'https://act.hoyolab.com/ys/event/signin-sea-v3/index.html?act_id=e202102251931481&hyl_auth_required=true&hyl_presentation_style=fullscreen&utm_source=hoyolab&utm_medium=tools&lang=en-us&bbs_theme=light&bbs_theme_device=1', 
+    url: 'https://act.hoyolab.com/ys/event/signin-sea-v3/index.html?act_id=e202102251931481&hyl_auth_required=true&hyl_presentation_style=fullscreen&utm_source=hoyolab&utm_medium=tools&lang=en-us&bbs_theme=light&bbs_theme_device=1',
   },
   {
     img: 'https://webstatic.hoyoverse.com/upload/op-public/2022/08/04/f474ba482f38a2f2420dc31c1876d155_6640492607556311675.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
     title: 'Teyvat Interactive Map',
-    url: 'https://act.hoyolab.com/ys/app/interactive-map/index.html?bbs_presentation_style=no_header&utm_source=hoyolab&utm_medium=tools&lang=en-us&bbs_theme=light&bbs_theme_device=1#/map/2?center=3262.67,-5690.55&zoom=-0.50&shown_types=413', 
+    url: 'https://act.hoyolab.com/ys/app/interactive-map/index.html?bbs_presentation_style=no_header&utm_source=hoyolab&utm_medium=tools&lang=en-us&bbs_theme=light&bbs_theme_device=1#/map/2?center=3262.67,-5690.55&zoom=-0.50&shown_types=413',
   },
   {
     img: 'https://webstatic.hoyoverse.com/upload/op-public/2022/08/04/47a1d15958531397e733abcbfceaad35_1250354074216960329.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
     title: 'Battle Chronicle',
-    url: 'https://act.hoyolab.com/app/community-game-records-sea/index.html?bbs_presentation_style=fullscreen&bbs_auth_required=true&v=350&gid=2&utm_source=hoyolab&utm_medium=tools&bbs_theme=light&bbs_theme_device=1#/ys', 
+    url: 'https://act.hoyolab.com/app/community-game-records-sea/index.html?bbs_presentation_style=fullscreen&bbs_auth_required=true&v=350&gid=2&utm_source=hoyolab&utm_medium=tools&bbs_theme=light&bbs_theme_device=1#/ys',
   },
   {
     img: 'https://webstatic.hoyoverse.com/upload/static-resource/2022/12/05/52f00a6be48ee77f9755c8065886f99b_6696816711781569875.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
     title: 'Toolbox',
-    url: 'https://act.hoyolab.com/ys/event/e20221121ugc-sea/index.html?game_biz=hk4e_global&utm_source=hoyolab&utm_medium=tools&utm_id=2&lang=en-us&bbs_theme=light&bbs_theme_device=1', 
+    url: 'https://act.hoyolab.com/ys/event/e20221121ugc-sea/index.html?game_biz=hk4e_global&utm_source=hoyolab&utm_medium=tools&utm_id=2&lang=en-us&bbs_theme=light&bbs_theme_device=1',
   },
   {
     img: 'https://upload-os-bbs.hoyolab.com/upload/2023/04/14/8e72620ef6afa97c8d4b9cc76aa691ca_8526865697008732974.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
     title: 'HoYoWiKi',
-    url: 'https://wiki.hoyolab.com/pc/genshin/home?bbs_presentation_style=fullscreen&utm_source=hoyolab&utm_medium=tools&utm_id=2&lang=en-us&bbs_theme=light&bbs_theme_device=1', 
+    url: 'https://wiki.hoyolab.com/pc/genshin/home?bbs_presentation_style=fullscreen&utm_source=hoyolab&utm_medium=tools&utm_id=2&lang=en-us&bbs_theme=light&bbs_theme_device=1',
   },
   {
     img: 'https://upload-os-bbs.hoyolab.com/upload/2023/02/20/f9b1d968594e18684d36884cff01a9de_508965325310327814.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
     title: 'Wallpapers',
-    url: 'https://www.hoyolab.com/creatorCollection/526679?utm_source=hoyolab&utm_medium=tools&bbs_theme=light&bbs_theme_device=1', 
+    url: 'https://www.hoyolab.com/creatorCollection/526679?utm_source=hoyolab&utm_medium=tools&bbs_theme=light&bbs_theme_device=1',
   },
 ];
 
-export {articleUser, toolsbar};
+const users = [
+  {
+    idUser: 10011,
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeePDCxDs0AD2Fc2fu57u8UNFU35WzgY9OuQ&usqp=CAU',
+    name: 'Simplor | Ganyu',
+    background: bg,
+    follow: true,
+    followDate: '10/11/2022',
+    following: '12',
+    follower: '2,555',
+    like: '99k',
+  },
+  {
+    idUser: 10012,
+    avatar: avt2,
+    name: 'Melanchophobia',
+    background: bg,
+    follow: true,
+    followDate: '09/10/2022',
+    following: '27',
+    follower: '1,888',
+    like: '9k',
+  },
+  {
+    idUser: 10013,
+    avatar: avt3,
+    name: 'Lyza❀',
+    background: bg,
+    folow: false,
+    followDate: '',
+    following: '55',
+    follower: '555',
+    like: '5k',
+  },
+  {
+    idUser: 10014,
+    avatar: 'https://upload-os-bbs.hoyolab.com/upload/2023/04/11/10199248/e76bc117f5f35c302cc6608fd12fb96f_3041191841913761143.jpg?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
+    name: 'Fluffy Kaga',
+    background: bg,
+    folow: false,
+    followDate: '',
+    following: '32',
+    follower: '7,777',
+    like: '7k',
+  },
+  {
+    idUser: 10015,
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcgcN9r32IRwhOzPLbBpA6YZatCBYV-iZTZA&usqp=CAU',
+    name: 'Only Arrai',
+    background: bg,
+    follow: true,
+    followDate: '02/02/2020',
+    following: '9',
+    follower: '9,999',
+    like: '9k',
+  },
+  {
+    idUser: 10017,
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmS52yUG_DYimbVFx8PJpx2QTHr9bDTWnDOw&usqp=CAU',
+    name: 'SHIRØKA',
+    background: bg,
+    follow: false,
+    followDate: '',
+    following: '1',
+    follower: '7,895',
+    like: '2k',
+  }
+]
+
+export { articleUser, toolsbar, users };
 

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { articleUser } from "../../constants";
 import classNames from "classnames/bind";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,6 +9,7 @@ import { Navigation, Thumbs } from "swiper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceLaughBeam, faHeart, faMessage, faShare, faStar } from "@fortawesome/free-solid-svg-icons";
 
+import { articleUser } from "../../constants";
 import styles from "./Article.scss";
 import config from "../../config";
 
@@ -19,6 +19,13 @@ function Article() {
     const article = articleUser.find(a => a.idArticle.toString() === id);
 
     const [activeThumb, setActiveThumb] = useState();
+
+    //show reply chat in chat box
+    const [index, setIndex] = useState(null);
+
+    const handleReply = (index) => {
+        setIndex(index);
+    };
 
     return (
         <div className={cx("body-wrapper")}>
@@ -147,7 +154,7 @@ function Article() {
                                             <div className={cx("reply-card-operation")}>
                                                 <span className={cx("reply-card_time")}>{comment.replyTime}</span>
                                                 <div className={cx("reply-card-operation_bottom")}>
-                                                    <div className={cx("article-footer-stats_item")}>
+                                                    <div className={cx("article-footer-stats_item")} onClick={() => handleReply(i)}>
                                                         <FontAwesomeIcon icon={faMessage} className={cx("article-footer-stats_item__icon")} />
                                                         <span>Comments</span>
                                                     </div>
@@ -157,7 +164,7 @@ function Article() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className={cx("article-ql")}>
+                                            <div className={i !== index ? 'article-ql' : 'article-ql show'}>
                                                 <div className={cx("ql-container")}>
                                                     <input type="text" placeholder=" " className={cx("ql-input")} />
                                                     <label for="name" className={cx("ql-label")}>Post your comment now~</label>

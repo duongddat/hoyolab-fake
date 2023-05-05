@@ -323,6 +323,7 @@
           }
 
           .article-ql {
+            display: none;
             padding-top: 16px;
     
             .ql-container {
@@ -389,6 +390,21 @@
             }
           }
 
+          .show {
+            display: block;
+            animation: slideDown .3s linear;
+          }
+
+          @keyframes slideDown {
+            from {
+              opacity: 0;
+              transform: translateY(-100%);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0%);
+            }
+          }
         }
       }
 
