@@ -1,16 +1,12 @@
 import Header from "../Header";
 
-function Layout({children}) {
-    return ( 
+function Layout({ children }) {
+    return (
         <aside>
-            <Header/>
-            <div className="container">
-                <div className="Content">
-                    {children}
-                </div>
-            </div>
+            <Header />
+            {children}
         </aside>
-     );
+    );
 }
 
 export default Layout;

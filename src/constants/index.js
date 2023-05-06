@@ -12,7 +12,7 @@ import img4 from '../assets/images/img4.webp';
 import img5 from '../assets/images/img5.webp';
 import img5o from '../assets/images/img5(1).webp';
 import img5t from '../assets/images/img5(2).webp';
-import bg from '../assets/video/bg.mp4';
+import bg from '../assets/images/bg.webp';
 
 const articleUser = [
   {
@@ -252,6 +252,17 @@ const toolsbar = [
 ];
 
 const users = [
+  {
+    idUser: 10010,
+    avatar: 'https://techraptor.net/sites/default/files/styles/image_header/public/2021-08/YoimiyaGenshinHeader.jpeg?itok=4vYkJQjK',
+    name: 'Asmywish',
+    background: 'https://upload-os-bbs.hoyolab.com/upload/2023/04/18/6bc434f7e6945a1c4c89b99e0afecd50_6499279974361228011.png?x-oss-process=image%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp',
+    follow: false,
+    followDate: '',
+    following: '96',
+    follower: '96,969',
+    like: '69k',
+  },
   {
     idUser: 10011,
     avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeePDCxDs0AD2Fc2fu57u8UNFU35WzgY9OuQ&usqp=CAU',

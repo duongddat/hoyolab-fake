@@ -58,7 +58,7 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
     return (
         <div className={cx("body-container")}>
             <div className={cx("user-card")}>
-                <Link to={config.routes.profile + `/${idUser}`} className={cx("user-card_link")}>
+                <Link to={config.routes.profile + `/${idUser}`} className={cx("user-card_link")}  onClick={handleScrollUp}>
                     <img className={cx("user-card_avatar")} src={avatar} alt="avatarUser" />
                     <div className={cx("user-card_inf")}>
                         <div className={cx("user-card_name")}>{name}</div>

@@ -33,7 +33,7 @@ function Header() {
                 <Menu>
                     <MenuItem title="Home" to={config.routes.home}/>
                     <MenuItem title="Follow" to={config.routes.following}/>
-                    <MenuItem title="Profile" to={config.routes.profile}/>
+                    <MenuItem title="Profile" to={config.routes.profile + '/10010'}/>
                     <MenuItem title="Contact" to={config.routes.contact}/>
                 </Menu>
             </nav>
@@ -82,7 +82,7 @@ function Header() {
                                 <div className={cx("user-account")}>
                                     <div className={cx("user-account__title")}>My Imformation</div>
                                     <div className={cx("user-account-menu-item")}>
-                                        <Link  className={cx("user-account-menu-item__content")} to={config.routes.profile}>
+                                        <Link  className={cx("user-account-menu-item__content")} to={config.routes.profile + '/10010'}>
                                             <FontAwesomeIcon className={cx("account-menu-item__icon")} icon={faUserAstronaut}/>
                                             <span>Personal Homepage</span>
                                             <FontAwesomeIcon className={cx("post-icon-arrow")} icon={faAngleRight}/>

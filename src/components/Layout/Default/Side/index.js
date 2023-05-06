@@ -8,18 +8,31 @@ import ScrollToTop from "../../../ScrollToTop";
 import { toolsbar } from "../../../../constants";
 import styles from "./Side.scss";
 import config from "../../../../config";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const cx = classNames.bind(styles);
 function Side() {
-    // const ref = useRef(null);
+    const footerRef = useRef(null);
     const [fixed, setFixed] = useState(false);
-    
-    const handleFixed = () => {
-        window.scrollY >= 1450 ? setFixed(true) : setFixed(false);
-    }
 
-    window.addEventListener('scroll', handleFixed);
+    useEffect(() => {
+        const sticky = footerRef.current.offsetTop;
+        
+        const handleScroll = () => {
+            if (window.pageYOffset > sticky) {
+                setFixed(true);
+            }
+            else {
+                setFixed(false);
+
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div className={cx("side-container")}>
@@ -98,7 +111,7 @@ function Side() {
                 </div>
                 <div className={cx("side-more")}>View more</div>
             </div>
-            <SliderAuto className={cx("side-slider-auto")}/>
+            <SliderAuto className={cx("side-slider-auto")} />
             <div className={cx("side-section")}>
                 <div className={cx("side-qrcode")}>
                     <div className={cx("side-qrcode_code")}></div>
@@ -108,7 +121,7 @@ function Side() {
                     </div>
                 </div>
             </div>
-            <div className={fixed ? 'side-footer sticky' : 'side-footer'}>
+            <div ref={footerRef} className={fixed ? 'side-footer sticky' : 'side-footer'}>
                 <div className={cx("footer-item")}>
                     <h3 className={cx("footer-item_title")}>About us</h3>
                     <div className={cx("footer-item_block")}>
@@ -141,7 +154,7 @@ function Side() {
                     <p>Copyright © X.D.D. All Rights Reserved.z</p>
                 </div>
             </div>
-            <ScrollToTop/>
+            <ScrollToTop />
         </div>
     );
 }

@@ -156,8 +156,8 @@ function Following() {
             </div>
             {users
                 .filter(user => user.follow)
-                .map((user) => (
-                    <>
+                .map((user, i) => (
+                    <div className={cx("list-following")} key={i}>
                         {articleUser.filter(article => article.idUser === user.idUser)
                             .map((art) => (
                                 <Article
@@ -174,7 +174,7 @@ function Following() {
                                 />
                             ))
                         }
-                    </>
+                    </div>
                 ))
             }
         </div>

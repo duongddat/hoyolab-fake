@@ -183,7 +183,7 @@
 
       .show-detail {
         display: flex;
-        animation: slideDown .3s linear;
+        animation: slideDown 0.3s linear;
       }
 
       @keyframes slideDown {
@@ -197,5 +197,9 @@
         }
       }
     }
+  }
+  .list-following {
+    width: 100%;
+    padding-top: 15px;
   }
 }

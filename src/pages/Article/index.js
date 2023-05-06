@@ -119,7 +119,7 @@ function Article() {
                     <div className={cx("article-ql")}>
                         <div className={cx("ql-container")}>
                             <input type="text" placeholder=" " className={cx("ql-input")} />
-                            <label for="name" className={cx("ql-label")}>Post your comment now~</label>
+                            <label htmlFor="name" className={cx("ql-label")}>Post your comment now~</label>
                         </div>
                         <div className={cx("group-reply")}>
                             <FontAwesomeIcon icon={faFaceLaughBeam} className={cx("reply-icon")} />
@@ -132,56 +132,52 @@ function Article() {
                         <span>All comments {article.comment.length}</span>
                     </div>
                     {
-                        article.comment.length > 0 ?
-                            (
-                                article.comment.map((comment, i) => (
-                                    <div key={i} className={cx("reply-card")}>
-                                        <div className={cx("reply-card-left")}>
-                                            <Link to={config.routes.profile + `/${comment.idUser}`} className={cx("reply-card_link")}>
-                                                <img src={comment.avatar} alt="user avatar" className={cx("reply-card_avatar")} />
+                        article.comment.length > 0 &&
+                        (
+                            article.comment.map((comment, i) => (
+                                <div key={i} className={cx("reply-card")}>
+                                    <div className={cx("reply-card-left")}>
+                                        <Link to={config.routes.profile + `/${comment.idUser}`} className={cx("reply-card_link")}>
+                                            <img src={comment.avatar} alt="user avatar" className={cx("reply-card_avatar")} />
+                                        </Link>
+                                    </div>
+                                    <div className={cx("reply-card-container")}>
+                                        <div className={cx("reply-card-header")}>
+                                            <Link to={config.routes.profile + `/${comment.idUser}`} className={cx("reply-card_nickname")}>
+                                                {comment.name}
+                                                <p>Fan</p>
                                             </Link>
                                         </div>
-                                        <div className={cx("reply-card-container")}>
-                                            <div className={cx("reply-card-header")}>
-                                                <Link to={config.routes.profile + `/${comment.idUser}`} className={cx("reply-card_nickname")}>
-                                                    {comment.name}
-                                                    <p>Fan</p>
-                                                </Link>
-                                            </div>
-                                            <div className={cx("reply-card-content")}>
-                                                <p>{comment.reply}</p>
-                                            </div>
-                                            <div className={cx("reply-card-operation")}>
-                                                <span className={cx("reply-card_time")}>{comment.replyTime}</span>
-                                                <div className={cx("reply-card-operation_bottom")}>
-                                                    <div className={cx("article-footer-stats_item")} onClick={() => handleReply(i)}>
-                                                        <FontAwesomeIcon icon={faMessage} className={cx("article-footer-stats_item__icon")} />
-                                                        <span>Comments</span>
-                                                    </div>
-                                                    <div className={cx("article-footer-stats_item")}>
-                                                        <FontAwesomeIcon icon={faHeart} className={cx("article-footer-stats_item__icon")} />
-                                                        <span>9</span>
-                                                    </div>
+                                        <div className={cx("reply-card-content")}>
+                                            <p>{comment.reply}</p>
+                                        </div>
+                                        <div className={cx("reply-card-operation")}>
+                                            <span className={cx("reply-card_time")}>{comment.replyTime}</span>
+                                            <div className={cx("reply-card-operation_bottom")}>
+                                                <div className={cx("article-footer-stats_item")} onClick={() => handleReply(i)}>
+                                                    <FontAwesomeIcon icon={faMessage} className={cx("article-footer-stats_item__icon")} />
+                                                    <span>Comments</span>
+                                                </div>
+                                                <div className={cx("article-footer-stats_item")}>
+                                                    <FontAwesomeIcon icon={faHeart} className={cx("article-footer-stats_item__icon")} />
+                                                    <span>9</span>
                                                 </div>
                                             </div>
-                                            <div className={i !== index ? 'article-ql' : 'article-ql show'}>
-                                                <div className={cx("ql-container")}>
-                                                    <input type="text" placeholder=" " className={cx("ql-input")} />
-                                                    <label for="name" className={cx("ql-label")}>Post your comment now~</label>
-                                                </div>
-                                                <div className={cx("group-reply")}>
-                                                    <FontAwesomeIcon icon={faFaceLaughBeam} className={cx("reply-icon")} />
-                                                    <button className={cx("btn-follow btn-send")}>Send</button>
-                                                </div>
+                                        </div>
+                                        <div className={i !== index ? 'article-ql' : 'article-ql show'}>
+                                            <div className={cx("ql-container")}>
+                                                <input type="text" placeholder=" " className={cx("ql-input")} />
+                                                <label htmlFor="name" className={cx("ql-label")}>Post your comment now~</label>
+                                            </div>
+                                            <div className={cx("group-reply")}>
+                                                <FontAwesomeIcon icon={faFaceLaughBeam} className={cx("reply-icon")} />
+                                                <button className={cx("btn-follow btn-send")}>Send</button>
                                             </div>
                                         </div>
                                     </div>
-                                ))
-                            )
-                            :
-                            (
-                                <></>
-                            )
+                                </div>
+                            ))
+                        )
                     }
                     <div className={cx("article-page-reply-list__loadmore")}>
                         <div className={cx("loadmore__nomore")}>
