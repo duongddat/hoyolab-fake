@@ -1,0 +1,25 @@
+.update-wrapper {
+  padding-top: 16px;
+  min-width: 768px;
+  margin: 0 auto;
+
+  .update-container {
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: center;
+    max-width: 1208px;
+    padding: 0 0;
+
+    .update-container-bg {
+        max-width: 896px;
+        background-color: #fff;
+        flex: 1;
+        border-radius: 16px;
+    }
+  }
+}
