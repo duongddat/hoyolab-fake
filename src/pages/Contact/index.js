@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 import classNames from "classnames/bind";
 
 import styles from "./Contact.scss";
@@ -43,6 +45,12 @@ function Contact() {
         }
     }
 
+    //Creat a react hook to add a scroll animation
+    useEffect(() => {
+        Aos.init({duration: 1500})
+    }, [])
+
+
     return (
         <div className={cx("contact-wrapper")}>
             <div className={cx("contact-container")}>
@@ -50,7 +58,7 @@ function Contact() {
                     <h4 className={cx("contact-title_header")}>Contact Us Page</h4>
                 </div>
                 <div className={cx("contact-content-list")}>
-                    <div className={cx("content-item")}>
+                    <div data-aos="fade-up" className={cx("content-item")}>
                         <div className={cx("content-item-thumbs")}>
                             <img src="https://i2.wp.com/gi-builds.sfo3.digitaloceanspaces.com/characters/zhongli/header_image.png?strip=all&quality=10&w=900" alt="" />
                         </div>
@@ -61,10 +69,10 @@ function Contact() {
                             <button onClick={() => console.log('connect')}>Let's connect</button>
                         </div>
                     </div>
-                    <div className={cx("content-divider")}>
+                    <div data-aos="fade-up" className={cx("content-divider")}>
                         <img src="https://img-os-static.hoyolab.com/divider_config/PC/line_3.png" alt="" />
                     </div>
-                    <div className={cx("content-item")}>
+                    <div data-aos="fade-up" className={cx("content-item")}>
                         <div className={cx("content-item-main mondstadt mr-15")}>
                             <span className={cx("tagline")}>My intro</span>
                             <h1>About Me</h1>
@@ -75,10 +83,10 @@ function Contact() {
                             <img src="https://i2.wp.com/gi-builds.sfo3.digitaloceanspaces.com/characters/venti/header_image.png?strip=all&quality=10&w=900" alt="" />
                         </div>
                     </div>
-                    <div className={cx("content-divider")}>
+                    <div data-aos="fade-up" className={cx("content-divider")}>
                         <img src="https://img-os-static.hoyolab.com/divider_config/PC/line_3.png" alt="" />
                     </div>
-                    <div className={cx("content-item")}>
+                    <div data-aos="fade-up" className={cx("content-item")}>
                         <div className={cx("content-item-thumbs")}>
                             <img src="https://api.ambr.top/assets/UI/UI_Gacha_AvatarImg_Shougun.png" alt="" />
                         </div>
@@ -89,10 +97,10 @@ function Contact() {
                             <button onClick={() => alert('Skill')}>Skills</button>
                         </div>
                     </div>
-                    <div className={cx("content-divider")}>
+                    <div data-aos="fade-up" className={cx("content-divider")}>
                         <img src="https://img-os-static.hoyolab.com/divider_config/PC/line_3.png" alt="" />
                     </div>
-                    <div className={cx("content-item")}>
+                    <div data-aos="fade-up" className={cx("content-item")}>
                         <div className={cx("content-item-main sumeru mr-15")}>
                             <span className={cx("tagline")}>Contact me</span>
                             <h1>My Contact</h1>
