@@ -92,7 +92,7 @@ function Header() {
                                 <div className={cx("user-account")}>
                                     <div className={cx("user-account__title")}>System Settings</div>
                                     <div className={cx("user-account-menu-item")}>
-                                        <Link  className={cx("user-account-menu-item__content")} to={config.routes.profile}>
+                                        <Link  className={cx("user-account-menu-item__content")} to={config.routes.login}>
                                             <FontAwesomeIcon className={cx("account-menu-item__icon")} icon={faRightFromBracket}/>
                                             <span>Log out</span>
                                         </Link>

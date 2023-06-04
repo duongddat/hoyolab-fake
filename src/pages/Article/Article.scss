@@ -48,6 +48,13 @@
               color: #ffff;
             }
           }
+
+          .btn-following {
+            &:hover {
+              background-color: #8592a3;
+              color: #ffff; 
+            }
+          }
         }
 
         .article-swiper-wrapper {
@@ -285,6 +292,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-top: 5px;
 
             .reply-card_time {
               font-size: 12px;

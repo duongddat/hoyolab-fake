@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight, faCircleXmark, faClone, faComment, faHeart, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames/bind";
 
+import {users} from "../../constants";
 import styles from "./article.scss";
 import config from "../../config";
 
@@ -15,6 +16,7 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
     const [show, setShow] = useState('slider-show');
     const [current, setCurrent] = useState(0);
     const lenght = image.length;
+    const checkFollow = users.find(user => user.idUser === idUser);
 
     //Check title 
     const fixTitle = title.length > 71 ? title.slice(0, 71) + '...' : title; 
@@ -65,7 +67,7 @@ function Article({ idUser, idArticle, avatar, name, info, title, topic, descript
                         <span className={cx("user-card_article")}>{info}</span>
                     </div>
                 </Link>
-                <button className={cx("btn-follow")}>Follow</button>
+                <button className={checkFollow.follow ? "btn btn-following" : "btn btn-follow"}>{checkFollow.follow ? 'Following': 'Follow'}</button>
             </div>
             <div className={cx("user-article")}>
                 <div className={cx("user-article_title")}>

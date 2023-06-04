@@ -11,6 +11,7 @@ function Profile() {
     const { idUser } = useParams();
     const profile = users.find(a => a.idUser.toString() === idUser);
     const article = articleUser.filter(a => a.idUser === profile.idUser);
+    const checkMain = profile.idUser === 10010;
 
     return (
         <div className={cx("profile-container")}>
@@ -61,7 +62,7 @@ function Profile() {
                                     </div>
                                 </div>
                                 <div className={cx("account-center-btn")}>
-                                    <button className={cx("btn-follow")}>{profile.idUser === 10010 ? 'Edit' : 'Follow'}</button>
+                                    <button className={cx("btn btn-follow")}>{checkMain ? 'Edit' : (profile.follow ? 'Following' : 'Follow')}</button>
                                 </div>
                             </div>
                         </div>

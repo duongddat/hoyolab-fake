@@ -9,7 +9,7 @@ body {
   outline: none;
 }
 
-.btn-follow {
+.btn {
   display: inline-block;
   border: none;
   border-radius: 15px;
@@ -18,8 +18,17 @@ body {
   line-height: 30px;
   font-size: 12px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-follow {
   color: #657ef9;
   background-color: #e1e7ff;
+}
+
+.btn-following {
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #f6f9fb;
 }
 
 input {

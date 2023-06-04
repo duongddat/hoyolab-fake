@@ -4,7 +4,7 @@ const routes = {
     profile: '/profile',
     upload: '/upload',
     contact: '/contact',
-    event: '/event',
+    login: '/login',
     article: '/article',
 }
 

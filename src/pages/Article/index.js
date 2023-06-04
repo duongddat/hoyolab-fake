@@ -9,7 +9,7 @@ import { Navigation, Thumbs } from "swiper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceLaughBeam, faHeart, faMessage, faShare, faStar } from "@fortawesome/free-solid-svg-icons";
 
-import { articleUser } from "../../constants";
+import { articleUser, users } from "../../constants";
 import styles from "./Article.scss";
 import config from "../../config";
 
@@ -17,6 +17,7 @@ const cx = classNames.bind(styles);
 function Article() {
     const { id } = useParams();
     const article = articleUser.find(a => a.idArticle.toString() === id);
+    const checkFollow = users.find(user => user.idUser === article.idUser);
 
     const [activeThumb, setActiveThumb] = useState();
 
@@ -52,7 +53,7 @@ function Article() {
                                     <span>{article.info}</span>
                                 </div>
                             </div>
-                            <button className={cx("btn-follow")}>Follow</button>
+                            <button className={checkFollow.follow ? "btn btn-following" : "btn btn-follow"}>{checkFollow.follow ? "Following" : "Follow"}</button>
                         </div>
 
                         <Swiper
@@ -123,7 +124,7 @@ function Article() {
                         </div>
                         <div className={cx("group-reply")}>
                             <FontAwesomeIcon icon={faFaceLaughBeam} className={cx("reply-icon")} />
-                            <button className={cx("btn-follow btn-send")}>Send</button>
+                            <button className={cx("btn btn-follow btn-send")}>Send</button>
                         </div>
                     </div>
                 </div>
@@ -171,7 +172,7 @@ function Article() {
                                             </div>
                                             <div className={cx("group-reply")}>
                                                 <FontAwesomeIcon icon={faFaceLaughBeam} className={cx("reply-icon")} />
-                                                <button className={cx("btn-follow btn-send")}>Send</button>
+                                                <button className={cx("btn btn-follow btn-send")}>Send</button>
                                             </div>
                                         </div>
                                     </div>
