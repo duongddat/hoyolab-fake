@@ -47,7 +47,7 @@ function Contact() {
 
     //Creat a react hook to add a scroll animation
     useEffect(() => {
-        Aos.init({duration: 1500})
+        Aos.init({ duration: 1500 })
     }, [])
 
 
@@ -105,9 +105,9 @@ function Contact() {
                             <span className={cx("tagline")}>Contact me</span>
                             <h1>My Contact</h1>
                             <div className={cx("content-item-icon")}>
-                                <FontAwesomeIcon icon={faFacebook} className={cx("icon-facebook")}/>
-                                <FontAwesomeIcon icon={faYoutube} className={cx("icon-youtube")}/>
-                                <FontAwesomeIcon icon={faInstagram} className={cx("icon-instagram")}/>
+                                <FontAwesomeIcon icon={faFacebook} className={cx("icon-facebook")} />
+                                <FontAwesomeIcon icon={faYoutube} className={cx("icon-youtube")} />
+                                <FontAwesomeIcon icon={faInstagram} className={cx("icon-instagram")} />
                             </div>
                             <button onClick={() => alert('More')}>View more</button>
                         </div>
